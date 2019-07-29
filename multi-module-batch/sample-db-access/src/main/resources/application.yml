@@ -1,0 +1,24 @@
+app:
+  package: com.example.multiModule.sampleDbAccess
+spring:
+  datasource:
+    postgres:
+      url: jdbc:postgresql://localhost:5433/postgres
+      username: postgres
+      password: postgres
+    mongo:
+      host: localhost
+      port: 27018
+      database: mongo
+  profiles:
+    include: common
+  jpa:
+    postgres:
+      properties:
+        hibernate:
+          show_sql: true
+          use_sql_comments: false
+          format_sql: true
+          jdbc:
+            lob:
+              non_contextual_creation: true

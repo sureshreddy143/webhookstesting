@@ -1,0 +1,27 @@
+packages:
+  common:
+    component: com.example.multiModule
+    postgres:
+      entity: com.example.multiModule.common.spring.postgres.entities
+      repository: com.example.multiModule.common.spring.postgres.repositories
+    mongo:
+      entity: com.example.multiModule.common.spring.mongo.entities
+      repository: com.example.multiModule.common.spring.mongo.repositories
+
+spring:
+  datasource:
+    postgres:
+      driver-class-name: org.postgresql.Driver
+      hikari:
+        # pooling setting
+        max-active: 15
+        max-age: 60000
+        max-idle: 2
+        max-wait: 10000
+        min-idle: 2
+        initial-size: 2
+        test-on-borrow: true
+        test-on-return: false
+        test-while-idle: true
+        validation-query: "SELECT 1"
+        validation-query-timeout: 1000
