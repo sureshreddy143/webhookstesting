@@ -12,16 +12,10 @@ spring:
   datasource:
     postgres:
       driver-class-name: org.postgresql.Driver
-      hikari:
-        # pooling setting
-        max-active: 15
-        max-age: 60000
-        max-idle: 2
-        max-wait: 10000
-        min-idle: 2
-        initial-size: 2
-        test-on-borrow: true
-        test-on-return: false
-        test-while-idle: true
-        validation-query: "SELECT 1"
-        validation-query-timeout: 1000
+    hikari:
+      minimum-idle: 2 # Default: Same as maximum-pool-size
+      maximum-pool-size: 4 # Default: 10
+      idle-timeout: 60000 # Default: 60seconds
+      connection-timeout: 30000 # Default: 30000
+      leak-detection-threshold: 5000 #5sec Default: 0 -> disable
+      max-lifetime: 600000 # 10min, Default: 1800000 (30 minutes)

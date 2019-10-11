@@ -50,7 +50,7 @@ public class PostgresConfig {
 	}
 
 	@Bean(name = "postgresDataSource")
-	@ConfigurationProperties("app.datasource.hikari")
+	@ConfigurationProperties("spring.datasource.hikari")
 	public HikariDataSource dataSource(DataSourceProperties properties) {
 		return properties.initializeDataSourceBuilder().type(HikariDataSource.class).build();
 	}
