@@ -10,6 +10,10 @@
 .project
 .settings/
 
+#IntelliJ
+.idea/
+*.iml
+
 # Spring
 .springBeans
 

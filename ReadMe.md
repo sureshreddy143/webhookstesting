@@ -4,6 +4,7 @@
 
 Java 1.8 or higher  
 Apache Maven 3  
+Lombok  
 Docker environment  
 
 ## How to use
