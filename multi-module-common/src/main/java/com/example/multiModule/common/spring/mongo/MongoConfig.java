@@ -25,9 +25,6 @@ import com.mongodb.MongoClient;
 public class MongoConfig {
 	
 	@Autowired
-	MongoDbFactory mongoDbFactory;
-	
-	@Autowired
 	MongoMappingContext mongoMappingContext;
 	
 	@Bean
