@@ -1,5 +1,5 @@
 app:
-  package: com.example.multiModule.sampleDbAccess
+  packages: com.example.multiModule.sampleDbAccess
 spring:
   datasource:
     postgres:

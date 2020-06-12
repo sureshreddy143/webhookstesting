@@ -15,7 +15,7 @@ import com.example.multiModule.common.spring.services.MongoSampleService;
 import com.example.multiModule.common.spring.services.PosgresSampleService;
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "${packages.common.component}", "${app.package}" })
+@ComponentScan(basePackages = { "${packages.common.component}", "${app.packages}" })
 public class SampleDbAccessApp implements ApplicationRunner {
 	@Autowired
 	PosgresSampleService postgresSampleService;
