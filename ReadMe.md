@@ -25,12 +25,12 @@ PostgreSQL databases and tables are automatically created.
 
 ### Start Spring Boot App
 ```
-$ pushd multi-module-batch/sample-db-access
+$ cd multi-module-batch/sample-db-access
 $ mvn spring-boot:run
 ```
 or  
 ```
-$ pushd multi-module-batch/sample-db-access
+$ cd multi-module-batch/sample-db-access
 $ java -jar target/sample-db-access-0.0.1.jar
 ```
 
