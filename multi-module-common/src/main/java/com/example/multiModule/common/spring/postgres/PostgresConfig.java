@@ -72,8 +72,6 @@ public class PostgresConfig {
 	@Primary
 	public PlatformTransactionManager postgresTransactionManager(
 			@Qualifier("postgresEntityManagerFactory") final EntityManagerFactory entityManagerFactory) {
-		final JpaTransactionManager transactionManager = new JpaTransactionManager();
-		transactionManager.setEntityManagerFactory(entityManagerFactory);
-		return transactionManager;
+		return new JpaTransactionManager(entityManagerFactory);
 	}
 }
